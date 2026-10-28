@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arambol Connect | Digital Marketing, CCTV Infrastructure & Compliance Hub Goa</title>
+  <meta name="description" content="Arambol Connect - North Goa's premier tech and business solutions partner. Enterprise CCTV (4-32 Ch), Google Map Top-3 SEO, SMM Ads, Hospitality Tech, and GST/FSSAI Compliance." />
+
+  <!-- Immediate Theme Initializer to prevent flicker -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('arambol_theme');
+      if (savedTheme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts: SF Pro / Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            apple: {
+              dark: '#0B0F19',
+              cardDark: '#111726',
+              borderDark: 'rgba(255, 255, 255, 0.08)',
+              light: '#F8FAFC',
+              cardLight: '#FFFFFF',
+              borderLight: 'rgba(0, 0, 0, 0.08)',
+              accent: '#3B82F6',
+              emerald: '#10B981',
+              emeraldGlow: 'rgba(16, 185, 129, 0.25)',
+              gold: '#F59E0B'
+            }
+          },
+          animation: {
+            'pulse-glow': 'pulseGlow 2.5s infinite',
+            'float-subtle': 'floatSubtle 5s ease-in-out infinite',
+            'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+          },
+          keyframes: {
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+              '50%': { opacity: '0.8', transform: 'scale(1.04)' }
+            },
+            floatSubtle: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js 3D Engine CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Google Translate Element Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,ru,hi,iw,fr,de,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Apple Aesthetic & Glassmorphism Styles -->
+  <style>
+    /* Smooth native scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Apple Dark Theme Base */
+    body {
+      background-color: #0B0F19;
+      color: #F8FAFC;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+
+    html:not(.dark) body {
+      background-color: #F8FAFC;
+      color: #0F172A;
+    }
+
+    /* Custom Glassmorphism */
+    .glass-nav {
+      background: rgba(11, 15, 25, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    html:not(.dark) .glass-nav {
+      background: rgba(255, 255, 255, 0.85);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .glass-card {
+      background: rgba(17, 23, 38, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+    }
+    html:not(.dark) .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.07);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.06);
+    }
+
+    /* 3D Tilt Card Base */
+    .tilt-card {
+      transform-style: preserve-3d;
+      will-change: transform;
+      position: relative;
+    }
+
+    .card-glare {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+
+    /* Gradient Typography */
+    .text-gradient-emerald {
+      background: linear-gradient(135deg, #10B981 0%, #34D399 50%, #38BDF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-apple {
+      background: linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    html:not(.dark) .text-gradient-apple {
+      background: linear-gradient(180deg, #0F172A 0%, #475569 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Hide ugly Google Translate top header & frame */
+    .goog-te-banner-frame.skiptranslate, 
+    .goog-te-banner-frame {
+      display: none !important;
+    }
+    body {
+      top: 0px !important;
+    }
+    #goog-gt-tt, .goog-te-balloon-frame {
+      display: none !important;
+    }
+    .goog-text-highlight {
+      background: none !important;
+      box-shadow: none !important;
+    }
+    .goog-te-gadget {
+      font-size: 0px !important;
+      color: transparent !important;
+    }
+    .goog-te-gadget .goog-te-combo {
+      margin: 0 !important;
+      padding: 6px 10px !important;
+      background: #111726 !important;
+      color: #fff !important;
+      border: 1px solid rgba(255,255,255,0.1) !important;
+      border-radius: 8px !important;
+      font-size: 13px !important;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0B0F19;
+    }
+    html:not(.dark) ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E293B;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #10B981;
+    }
+  </style>
+</head>
+<body class="selection:bg-emerald-500/30 selection:text-emerald-300">
+
+  <!-- Three.js 3D Interactive Background Canvas -->
+  <canvas id="three-bg" class="fixed inset-0 pointer-events-none z-0 opacity-70"></canvas>
+
+  <!-- Ambient Glow Canvas Mesh (Apple Style) -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-gradient-to-br from-emerald-500/10 via-blue-600/10 to-transparent blur-[140px] rounded-full"></div>
+    <div class="absolute top-[40%] -left-[10%] w-[600px] h-[600px] bg-emerald-600/5 blur-[160px] rounded-full"></div>
+    <div class="absolute top-[70%] -right-[10%] w-[700px] h-[700px] bg-blue-600/5 blur-[180px] rounded-full"></div>
+  </div>
+
+  <!-- Top Announcement / Quick Contact Bar -->
+  <div class="relative z-50 bg-slate-900/90 dark:bg-slate-950/90 border-b border-white/[0.06] text-xs text-slate-300 py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="flex h-2 w-2 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="font-medium text-emerald-400">Arambol Tech Hub:</span>
+        <span class="text-slate-400 hidden sm:inline">On-site Support across Arambol, Mandrem, Morjim & Ashwem</span>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs">
+        <a href="tel:+919373913379" class="hover:text-emerald-400 transition flex items-center gap-1.5 font-medium">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>+91 9373913379</span>
+        </a>
+        <span class="text-slate-700">|</span>
+        <a href="https://wa.me/919546506600?text=Hi%20Arambol%20Connect,%20I%20need%20business%20solutions%20in%20Goa" target="_blank" rel="noopener" class="hover:text-emerald-400 transition flex items-center gap-1.5 font-medium">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span class="hidden md:inline">WhatsApp:</span>
+          <span>+91 9546506600</span>
+        </a>
+        <span class="text-slate-700 hidden lg:inline">|</span>
+        <span class="text-slate-400 hidden lg:flex items-center gap-1">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-emerald-400"></i>
+          137, Deulwada, Arambol, Goa - 403524
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Glass Navigation -->
+  <header class="sticky top-0 z-40 glass-nav transition-all duration-300" id="main-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Identity -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-blue-600 p-[1.5px] shadow-lg shadow-emerald-500/20 group-hover:shadow-emerald-500/40 transition duration-300">
+            <div class="w-full h-full bg-[#0B0F19] rounded-[14px] flex items-center justify-center">
+              <i data-lucide="shield-check" class="w-6 h-6 text-emerald-400 group-hover:scale-110 transition duration-300"></i>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5 font-display font-bold text-xl tracking-tight">
+              <span class="text-slate-900 dark:text-white">Arambol</span>
+              <span class="text-emerald-500 dark:text-emerald-400">Connect</span>
+            </div>
+            <p class="text-[10px] tracking-wider uppercase text-slate-500 dark:text-slate-400 font-semibold flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Digital • CCTV • Compliance
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+          <a href="#services" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Services</a>
+          <a href="#cctv-feature" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">CCTV Grid</a>
+          <a href="#pricing" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Dynamic Pricing</a>
+          <a href="#calculator" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Quote Builder</a>
+          <a href="#contact" class="hover:text-emerald-500 dark:hover:text-emerald-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Side Controls: Language, Theme Toggle, Primary Action -->
+        <div class="flex items-center gap-3">
+          
+          <!-- Multilingual Dropdown (Top 7 Languages) -->
+          <div class="relative" id="lang-dropdown-wrapper">
+            <button id="lang-menu-btn" type="button" aria-expanded="false" class="flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold bg-white/10 dark:bg-white/[0.06] hover:bg-white/20 dark:hover:bg-white/10 border border-black/10 dark:border-white/10 transition text-slate-800 dark:text-slate-200">
+              <i data-lucide="globe" class="w-4 h-4 text-emerald-400"></i>
+              <span id="current-lang-label">English</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400"></i>
+            </button>
+
+            <!-- Language Menu Popup -->
+            <div id="lang-menu" class="hidden absolute right-0 mt-2 w-48 rounded-2xl glass-card py-2 shadow-2xl z-50 border border-black/10 dark:border-white/10">
+              <div class="px-3 py-1.5 text-[10px] font-bold tracking-wider uppercase text-slate-400 border-b border-white/5">Select Language</div>
+              <button onclick="setLanguage('en', 'English', '🇺🇸')" class="w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-emerald-500/10 text-slate-700 dark:text-slate-200 hover:text-emerald-400 transition">
+                <span>🇺🇸 English</span>
+                <span class="text-[10px] text-slate-400">EN</span>
+              </button>
+              <button onclick="setLanguage('ru', 'Русский', '🇷🇺')" class="w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-emerald-500/10 text-slate-700 dark:text-slate-200 hover:text-emerald-400 transition">
+                <span>🇷🇺 Русский</span>
+                <span class="text-[10px] text-slate-400">RU</span>
+              </button>
+              <button onclick="setLanguage('hi', 'हिन्दी', '🇮🇳')" class="w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-emerald-500/10 text-slate-700 dark:text-slate-200 hover:text-emerald-400 transition">
+                <span>🇮🇳 हिन्दी</span>
+                <span class="text-[10px] text-slate-400">HI</span>
+              </button>
+              <button onclick="setLanguage('iw', 'עברית', '🇮🇱')" class="w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-emerald-500/10 text-slate-700 dark:text-slate-200 hover:text-emerald-400 transition">
+                <span>🇮🇱 עברית</span>
+                <span class="text-[10px] text-slate-400">HE</span>
+              </button>
+              <button onclick="setLanguage('fr', 'Français', '🇫🇷')" class="w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-emerald-500/10 text-slate-700 dark:text-slate-200 hover:text-emerald-400 transition">
+                <span>🇫🇷 Français</span>
+                <span class="text-[10px] text-slate-400">FR</span>
+              </button>
+              <button onclick="setLanguage('de', 'Deutsch', '🇩🇪')" class="w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-emerald-500/10 text-slate-700 dark:text-slate-200 hover:text-emerald-400 transition">
+                <span>🇩🇪 Deutsch</span>
+                <span class="text-[10px] text-slate-400">DE</span>
+              </button>
+              <button onclick="setLanguage('es', 'Español', '🇪🇸')" class="w-full text-left px-3 py-2 text-xs flex items-center justify-between hover:bg-emerald-500/10 text-slate-700 dark:text-slate-200 hover:text-emerald-400 transition">
+                <span>🇪🇸 Español</span>
+                <span class="text-[10px] text-slate-400">ES</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Light / Dark Mode Toggle -->
+          <button id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme" class="p-2.5 rounded-xl bg-white/10 dark:bg-white/[0.06] hover:bg-white/20 dark:hover:bg-white/10 border border-black/10 dark:border-white/10 transition text-slate-800 dark:text-slate-200">
+            <i data-lucide="sun" class="w-4 h-4 theme-icon-sun"></i>
+            <i data-lucide="moon" class="w-4 h-4 theme-icon-moon hidden"></i>
+          </button>
+
+          <!-- Direct Call CTA Button -->
+          <a href="tel:+919373913379" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-display shadow-lg shadow-emerald-500/25 transition-all transform active:scale-95">
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+            <span>Call +91 9373913379</span>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl bg-white/10 dark:bg-white/[0.06] text-slate-800 dark:text-slate-200">
+            <i data-lucide="menu" class="w-6 h-6" id="menu-icon-open"></i>
+            <i data-lucide="x" class="w-6 h-6 hidden" id="menu-icon-close"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden Native Google Translate Mount Container -->
+    <div id="google_translate_element" class="hidden"></div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 glass-nav px-4 py-6 space-y-4">
+      <div class="flex flex-col space-y-3 font-medium text-sm">
+        <a href="#services" class="mobile-nav-link text-slate-300 hover:text-emerald-400 py-1">Services Bento</a>
+        <a href="#cctv-feature" class="mobile-nav-link text-slate-300 hover:text-emerald-400 py-1">CCTV Packages</a>
+        <a href="#pricing" class="mobile-nav-link text-slate-300 hover:text-emerald-400 py-1">Pricing Configuration</a>
+        <a href="#calculator" class="mobile-nav-link text-slate-300 hover:text-emerald-400 py-1">Quote Builder</a>
+        <a href="#contact" class="mobile-nav-link text-slate-300 hover:text-emerald-400 py-1">Contact & Address</a>
+      </div>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="tel:+919373913379" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-500 text-slate-950 font-bold text-xs">
+          <i data-lucide="phone" class="w-4 h-4"></i> Call +91 9373913379
+        </a>
+        <a href="https://wa.me/919546506600?text=Hi%20Arambol%20Connect,%20I%20need%20assistance" target="_blank" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold text-xs">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp +91 9546506600
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Apple Inspired Minimalist Glow) -->
+  <section class="relative pt-16 pb-20 md:pt-28 md:pb-32 overflow-hidden z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Top Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-8 animate-float-subtle">
+        <span class="flex h-2 w-2 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span>Arambol & North Goa's Complete Tech Ecosystem</span>
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight font-display text-slate-900 dark:text-white max-w-5xl mx-auto leading-[1.12]">
+        Elevate Your Goa Business with <span class="text-gradient-emerald">Intelligent Security</span>, Digital Reach & Compliance.
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mt-6 text-base sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
+        From 4-to-32 channel enterprise CCTV installations and Google Map Pack #1 rankings to zero-commission hospitality booking engines and turnkey GST/FSSAI filings — built specifically for Goa's hospitality, retail & luxury real estate.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/919546506600?text=Hi%20Arambol%20Connect,%20I%20would%20like%20a%20free%20consultation%20for%20my%20business%20in%20Goa" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm tracking-wide shadow-xl shadow-emerald-500/25 transition-all transform hover:-translate-y-0.5 active:scale-95">
+          <i data-lucide="message-circle" class="w-5 h-5 fill-slate-950"></i>
+          <span>Instant WhatsApp Consultation</span>
+        </a>
+
+        <a href="tel:+919373913379" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-white/10 dark:bg-white/[0.06] hover:bg-white/20 dark:hover:bg-white/10 text-slate-900 dark:text-white border border-black/10 dark:border-white/10 font-semibold text-sm backdrop-blur-md transition-all">
+          <i data-lucide="phone-outgoing" class="w-4 h-4 text-emerald-400"></i>
+          <span>Call Direct: +91 9373913379</span>
+        </a>
+      </div>
+
+      <!-- Trust Badges Bar -->
+      <div class="mt-16 pt-10 border-t border-black/10 dark:border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-left">
+        <div class="flex items-center gap-3.5">
+          <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <i data-lucide="video" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="font-bold text-sm text-slate-900 dark:text-white font-display">4K Starlight CCTV</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Night Vision & Mobile App</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5">
+          <div class="p-2.5 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            <i data-lucide="trending-up" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="font-bold text-sm text-slate-900 dark:text-white font-display">Top-3 Google Maps</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Targeted Tourist Traffic</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5">
+          <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+            <i data-lucide="qr-code" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="font-bold text-sm text-slate-900 dark:text-white font-display">0% Commission</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Hotel & Dining Tech</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5">
+          <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <i data-lucide="file-check-2" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="font-bold text-sm text-slate-900 dark:text-white font-display">GST & FSSAI Compliant</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">24-48h Fast Track Filing</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Services Bento Grid Section (Apple Inspired Asymmetric Layout) -->
+  <section id="services" class="py-20 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-xs font-bold tracking-widest uppercase text-emerald-400 mb-3">Our Core Verticals</div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-slate-900 dark:text-white tracking-tight">
+          Crafted for Goa's Unique Business Landscape.
+        </h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base">
+          Four interconnected pillars providing infrastructure security, customer acquisition, hospitality systems, and statutory compliance.
+        </p>
+      </div>
+
+      <!-- Bento Grid Container -->
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1: CCTV Infrastructure (Large Bento Card - Col Span 2) -->
+        <div class="md:col-span-2 lg:col-span-2 glass-card tilt-card rounded-3xl p-8 relative overflow-hidden group border border-white/10">
+          <div class="card-glare"></div>
+          
+          <!-- Accent Header -->
+          <div class="flex items-center justify-between mb-6">
+            <div class="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-400">
+              <i data-lucide="cctv" class="w-7 h-7"></i>
+            </div>
+            <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+              Enterprise Grade • 4K UHD
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-bold font-display text-slate-900 dark:text-white mb-2">
+            CCTV Infrastructure & Surveillance
+          </h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 leading-relaxed">
+            Turnkey commercial video security engineered for coastal weather resilience. From private boutique villas to sprawling beach clubs and 100-room luxury resorts.
+          </p>
+
+          <!-- Interactive Channel Specs Matrix -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-6 text-center">
+            <div class="p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition">
+              <div class="font-display font-bold text-base text-emerald-400">4 Channel</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Villas & Cafes</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition">
+              <div class="font-display font-bold text-base text-emerald-400">8 Channel</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Boutique Stays</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition">
+              <div class="font-display font-bold text-base text-emerald-400">16 Channel</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Resorts & Clubs</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 transition">
+              <div class="font-display font-bold text-base text-emerald-400">32 Channel</div>
+              <div class="text-[11px] text-slate-400 mt-0.5">Commercial Park</div>
+            </div>
+          </div>
+
+          <!-- Feature Bullets -->
+          <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-300 mb-8">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span><strong>Color Night Vision (0.001 Lux):</strong> Crisp 24/7 color feeds even in pitch darkness.</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span><strong>Instant Mobile Remote View:</strong> Live iPhone, iPad, and Android streaming with multi-user staff roles.</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span><strong>Cloud + Local Redundancy:</strong> Smart NVR with tamper-proof Seagate SkyHawk surveillance drives.</span>
+            </li>
+          </ul>
+
+          <!-- Action Endpoints -->
+          <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/10">
+            <a href="tel:+919373913379" class="px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center gap-2 transition">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+              <span>Call CCTV Engineer (+91 9373913379)</span>
+            </a>
+            <a href="https://wa.me/919546506600?text=Hi%20Arambol%20Connect,%20I%20need%20a%20quote%20for%20CCTV%20installation%20in%20Goa" target="_blank" class="px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white font-medium text-xs flex items-center gap-2 border border-white/10 transition">
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>WhatsApp CCTV Specs</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Digital Growth (Bento Card - Col Span 2) -->
+        <div class="md:col-span-1 lg:col-span-2 glass-card tilt-card rounded-3xl p-8 relative overflow-hidden group border border-white/10">
+          <div class="card-glare"></div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="p-3 rounded-2xl bg-blue-500/10 border border-blue-500/25 text-blue-400">
+              <i data-lucide="trending-up" class="w-7 h-7"></i>
+            </div>
+            <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-blue-500/15 text-blue-400 border border-blue-500/30">
+              Top-3 Google Guarantee
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-bold font-display text-slate-900 dark:text-white mb-2">
+            Digital Growth & Visibility
+          </h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 leading-relaxed">
+            Capture every tourist searching for your services in North Goa. We dominate local search rankings and convert traffic into paying visitors.
+          </p>
+
+          <div class="space-y-4 mb-6">
+            <!-- Pillar 1 -->
+            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
+              <div class="p-1.5 rounded-lg bg-blue-500/20 text-blue-400 shrink-0 mt-0.5">
+                <i data-lucide="map" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900 dark:text-white">SEO Google Map Pack Top-3</div>
+                <div class="text-[11px] text-slate-400">Directly rank on Google Maps when guests search "best food near me", "villa Arambol", or "resort Mandrem".</div>
+              </div>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
+              <div class="p-1.5 rounded-lg bg-blue-500/20 text-blue-400 shrink-0 mt-0.5">
+                <i data-lucide="instagram" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900 dark:text-white">SMM & Hyper-Targeted Instagram Ads</div>
+                <div class="text-[11px] text-slate-400">Geo-fencing tourists stepping off planes at Mopa/Dabolim airports with scroll-stopping video reels.</div>
+              </div>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
+              <div class="p-1.5 rounded-lg bg-blue-500/20 text-blue-400 shrink-0 mt-0.5">
+                <i data-lucide="code-2" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-slate-900 dark:text-white">Modern Web & Mobile App Development</div>
+                <div class="text-[11px] text-slate-400">Sub-second loading PWAs with direct WhatsApp and booking APIs built for international clientele.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+            <a href="tel:+919373913379" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+              <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+              <span>Consult SEO Lead: +91 9373913379</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Hospitality Tech (Bento Card - Col Span 2) -->
+        <div class="md:col-span-1 lg:col-span-2 glass-card tilt-card rounded-3xl p-8 relative overflow-hidden group border border-white/10">
+          <div class="card-glare"></div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/25 text-amber-400">
+              <i data-lucide="utensils" class="w-7 h-7"></i>
+            </div>
+            <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-amber-500/15 text-amber-400 border border-amber-500/30">
+              Zero Commission Stack
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-bold font-display text-slate-900 dark:text-white mb-2">
+            Hospitality Tech Ecosystem
+          </h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 leading-relaxed">
+            Eliminate crippling 18-25% OTA commissions. We build bespoke booking engines and digital table tech that channel revenue directly into your bank account.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+              <i data-lucide="qr-code" class="w-5 h-5 text-amber-400 mx-auto mb-1.5"></i>
+              <div class="font-bold text-xs text-slate-900 dark:text-white">QR Digital Menus</div>
+              <div class="text-[10px] text-slate-400 mt-1">Multi-currency & 7-Language dynamic menus</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+              <i data-lucide="calendar-check" class="w-5 h-5 text-amber-400 mx-auto mb-1.5"></i>
+              <div class="font-bold text-xs text-slate-900 dark:text-white">Table Booking</div>
+              <div class="text-[10px] text-slate-400 mt-1">Direct WhatsApp table confirmation & alerts</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+              <i data-lucide="hotel" class="w-5 h-5 text-amber-400 mx-auto mb-1.5"></i>
+              <div class="font-bold text-xs text-slate-900 dark:text-white">Hotel Direct Book</div>
+              <div class="text-[10px] text-slate-400 mt-1">0% Commission PMS & Razorpay sync</div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between">
+            <span class="text-xs text-slate-400">Deployed at 45+ Goa cafes & resorts</span>
+            <a href="https://wa.me/919546506600?text=Hi%20Arambol%20Connect,%20I%20want%20a%20demo%20of%20Hospitality%20Tech%20(QR%20Menu%20/%20Direct%20Booking)" target="_blank" class="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1">
+              <span>Request Live Demo</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Compliance & Legal (Bento Card - Col Span 2) -->
+        <div class="md:col-span-2 lg:col-span-2 glass-card tilt-card rounded-3xl p-8 relative overflow-hidden group border border-white/10">
+          <div class="card-glare"></div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-400">
+              <i data-lucide="scale" class="w-7 h-7"></i>
+            </div>
+            <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+              Fast-Track 24-48h Filing
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-bold font-display text-slate-900 dark:text-white mb-2">
+            Business Compliance & Licensing
+          </h3>
+          <p class="text-slate-600 dark:text-slate-300 text-sm mb-6 leading-relaxed">
+            Run your Goa business without legal headaches. We manage end-to-end statutory registrations, tax filings, and local government approvals with 100% paperless efficiency.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+              <div class="flex items-center gap-2 mb-1">
+                <i data-lucide="badge-percent" class="w-4 h-4 text-emerald-400"></i>
+                <div class="font-bold text-xs text-slate-900 dark:text-white">GST Registration & Filing</div>
+              </div>
+              <div class="text-[11px] text-slate-400">GSTR-1, GSTR-3B monthly filing with zero penalty guarantee.</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+              <div class="flex items-center gap-2 mb-1">
+                <i data-lucide="building-2" class="w-4 h-4 text-emerald-400"></i>
+                <div class="font-bold text-xs text-slate-900 dark:text-white">MSME / Udyam</div>
+              </div>
+              <div class="text-[11px] text-slate-400">Government subsidies, lower interest business loans & priority IP.</div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+              <div class="flex items-center gap-2 mb-1">
+                <i data-lucide="chef-hat" class="w-4 h-4 text-emerald-400"></i>
+                <div class="font-bold text-xs text-slate-900 dark:text-white">FSSAI Food License</div>
+              </div>
+              <div class="text-[11px] text-slate-400">Mandatory food hygiene certification for cafes, shacks & bakeries.</div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-white/10">
+            <span class="text-xs text-slate-400">Arambol Deulwada In-Person Support</span>
+            <a href="tel:+919373913379" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+              <span>Direct Hotline: +91 9373913379</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Dedicated CCTV Architecture Showcase Section -->
+  <section id="cctv-feature" class="py-20 relative z-10 bg-black/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-emerald-500/20 relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold mb-4">
+              <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+              Goa Coastal Weather Certified Security
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 dark:text-white leading-tight mb-4">
+              Commercial CCTV Surveillance Built for High Humidity & Beach Salinity.
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              Standard consumer cameras fail within 6 months in coastal Goa due to salt corrosion and power surges. Our enterprise packs feature IP67 weatherized metal enclosures, shielded optical Cat6 cabling, dedicated surge protection, and dual local/cloud live view streaming.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+              <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                <div class="text-xl font-extrabold text-emerald-400 font-display">4 Channel</div>
+                <div class="text-[11px] text-slate-400 mt-1">Villa / Boutique</div>
+                <div class="text-xs font-bold text-white mt-2">from ₹14,999</div>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                <div class="text-xl font-extrabold text-emerald-400 font-display">8 Channel</div>
+                <div class="text-[11px] text-slate-400 mt-1">Hotels & Cafes</div>
+                <div class="text-xs font-bold text-white mt-2">from ₹26,999</div>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                <div class="text-xl font-extrabold text-emerald-400 font-display">16 Channel</div>
+                <div class="text-[11px] text-slate-400 mt-1">Resorts & Clubs</div>
+                <div class="text-xs font-bold text-white mt-2">from ₹49,999</div>
+              </div>
+
+              <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10">
+                <div class="text-xl font-extrabold text-emerald-400 font-display">32 Channel</div>
+                <div class="text-[11px] text-slate-400 mt-1">Enterprises</div>
+                <div class="text-xs font-bold text-white mt-2">from ₹94,999</div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="tel:+919373913379" class="px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center gap-2 shadow-lg shadow-emerald-500/25 transition">
+                <i data-lucide="phone-call" class="w-4 h-4"></i>
+                <span>Schedule Free Site Survey: +91 9373913379</span>
+              </a>
+              <a href="https://wa.me/919546506600?text=Hi%20Arambol%20Connect,%20I%20want%20to%20schedule%20a%20CCTV%20site%20inspection%20in%20Goa" target="_blank" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs flex items-center gap-2 border border-white/10 transition">
+                <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                <span>WhatsApp Specs to +91 9546506600</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Camera Simulated Live Feed UI -->
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl bg-slate-950 p-4 border border-white/10 shadow-2xl relative">
+              <div class="flex items-center justify-between pb-3 border-b border-white/10 text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <span class="font-mono text-emerald-400 text-[11px]">NVR-04 // CAM-01 [ARAMBOL BEACH ROAD]</span>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono">LIVE • 4K UHD</span>
+              </div>
+
+              <!-- Video Mock Viewport -->
+              <div class="relative mt-3 rounded-xl overflow-hidden aspect-video bg-gradient-to-tr from-slate-900 via-slate-800 to-slate-950 flex items-center justify-center border border-white/5">
+                <div class="absolute top-3 left-3 text-[10px] font-mono text-white/70 bg-black/60 px-2 py-0.5 rounded">
+                  FPS: 30 | BITRATE: 8192 Kbps | STARLIGHT ACTIVE
+                </div>
+                <div class="absolute bottom-3 right-3 text-[10px] font-mono text-white/70 bg-black/60 px-2 py-0.5 rounded" id="live-time-display">
+                  REC: 2026-10-27 21:50:16
+                </div>
+
+                <div class="text-center p-6">
+                  <div class="w-14 h-14 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center mx-auto mb-3 text-emerald-400">
+                    <i data-lucide="eye" class="w-7 h-7"></i>
+                  </div>
+                  <div class="text-xs font-semibold text-slate-200">Mobile Remote View Simulation</div>
+                  <div class="text-[11px] text-slate-400 mt-1">Multi-user real-time stream on iOS & Android</div>
+                </div>
+              </div>
+
+              <!-- Stream Status -->
+              <div class="mt-3 pt-3 border-t border-white/10 grid grid-cols-3 text-center text-[10px] text-slate-400">
+                <div>Audio: <span class="text-emerald-400 font-mono">2-Way Active</span></div>
+                <div>Motion AI: <span class="text-emerald-400 font-mono">Perimeter Safe</span></div>
+                <div>Cloud Sync: <span class="text-emerald-400 font-mono">99.9% Online</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Pricing Section (Rendered from PRICING_CONFIG) -->
+  <section id="pricing" class="py-20 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="text-xs font-bold tracking-widest uppercase text-emerald-400 mb-2">Transparent Dynamic Pricing</div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-slate-900 dark:text-white tracking-tight">
+          Enterprise Solutions. Predictable Investments.
+        </h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 text-sm sm:text-base">
+          All packages are fully customizable. Driven by our dynamic engine — no hidden fees, complete transparency.
+        </p>
+
+        <!-- Category Tabs Filter -->
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-2" id="pricing-category-tabs">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+
+      <!-- Dynamic Pricing Grid Container -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="pricing-cards-container">
+        <!-- Rendered dynamically from PRICING_CONFIG -->
+      </div>
+
+      <!-- Pricing Notice / Custom Architecture Callout -->
+      <div class="mt-12 text-center p-6 rounded-2xl glass-card max-w-3xl mx-auto border border-white/10">
+        <p class="text-xs text-slate-400">
+          Need a combined setup (e.g. 16 Cameras + Google SEO + FSSAI Food License)? Call our team at <a href="tel:+919373913379" class="text-emerald-400 font-bold hover:underline">+91 9373913379</a> or <a href="https://wa.me/919546506600?text=Hi%20Arambol%20Connect,%20I%20want%20a%20custom%20bundle%20package" class="text-emerald-400 font-bold hover:underline">WhatsApp +91 9546506600</a> for custom bundle discounts.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive ROI & Custom Quote Builder -->
+  <section id="calculator" class="py-20 relative z-10 bg-black/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-white/10">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <div class="text-xs font-bold tracking-widest uppercase text-emerald-400 mb-2">Instant Quote Builder</div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold font-display text-slate-900 dark:text-white">
+            Customize Your Arambol Tech Stack
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-400 mt-2">
+            Select the services your property or business requires to generate an instant quotation for our on-ground team.
+          </p>
+        </div>
+
+        <!-- Checkbox Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8" id="calc-checkbox-container">
+          
+          <label class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 cursor-pointer flex items-start gap-3 transition">
+            <input type="checkbox" data-service="CCTV 4-32 Ch" data-price="14999" class="mt-1 rounded text-emerald-500 focus:ring-emerald-400 h-4 w-4" onchange="calculateQuote()">
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">CCTV Surveillance System</div>
+              <div class="text-[11px] text-slate-400">4, 8, 16, or 32 Channel IP Setup</div>
+            </div>
+          </label>
+
+          <label class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 cursor-pointer flex items-start gap-3 transition">
+            <input type="checkbox" data-service="Google Maps Top-3 SEO" data-price="7999" class="mt-1 rounded text-emerald-500 focus:ring-emerald-400 h-4 w-4" onchange="calculateQuote()">
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Google Map Pack SEO Top-3</div>
+              <div class="text-[11px] text-slate-400">Targeted Goa tourist discovery</div>
+            </div>
+          </label>
+
+          <label class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 cursor-pointer flex items-start gap-3 transition">
+            <input type="checkbox" data-service="Instagram Ads & SMM" data-price="11999" class="mt-1 rounded text-emerald-500 focus:ring-emerald-400 h-4 w-4" onchange="calculateQuote()">
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Instagram Ads & SMM</div>
+              <div class="text-[11px] text-slate-400">High-converting video & reels reach</div>
+            </div>
+          </label>
+
+          <label class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 cursor-pointer flex items-start gap-3 transition">
+            <input type="checkbox" data-service="QR Digital Menu" data-price="4999" class="mt-1 rounded text-emerald-500 focus:ring-emerald-400 h-4 w-4" onchange="calculateQuote()">
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Interactive QR Digital Menu</div>
+              <div class="text-[11px] text-slate-400">7-language translation & instant updates</div>
+            </div>
+          </label>
+
+          <label class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 cursor-pointer flex items-start gap-3 transition">
+            <input type="checkbox" data-service="Hotel Direct Booking Engine" data-price="14999" class="mt-1 rounded text-emerald-500 focus:ring-emerald-400 h-4 w-4" onchange="calculateQuote()">
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Hotel Direct Booking Engine</div>
+              <div class="text-[11px] text-slate-400">0% commission direct room bookings</div>
+            </div>
+          </label>
+
+          <label class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-500/40 cursor-pointer flex items-start gap-3 transition">
+            <input type="checkbox" data-service="GST Registration & Filing" data-price="1999" class="mt-1 rounded text-emerald-500 focus:ring-emerald-400 h-4 w-4" onchange="calculateQuote()">
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">GST / MSME / FSSAI Compliance</div>
+              <div class="text-[11px] text-slate-400">Fast-track filings & licensing</div>
+            </div>
+          </label>
+
+        </div>
+
+        <!-- Calculated Estimate Box -->
+        <div class="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <div class="text-xs font-medium text-emerald-400 uppercase tracking-wider">Estimated Investment</div>
+            <div class="text-3xl font-extrabold text-slate-900 dark:text-white font-display mt-0.5" id="quote-total-display">
+              Select Services Above
+            </div>
+            <div class="text-xs text-slate-400 mt-1" id="quote-items-count">0 services selected • Includes on-ground Arambol warranty</div>
+          </div>
+
+          <div class="flex items-center gap-3 w-full sm:w-auto">
+            <button onclick="sendCalculatedQuoteToWhatsApp()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25 transition">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Send Estimate to WhatsApp</span>
+            </button>
+            <a href="tel:+919373913379" class="p-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/10 transition" title="Call directly">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Goa Success & Testimonials -->
+  <section class="py-20 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <div class="text-xs font-bold tracking-widest uppercase text-emerald-400 mb-2">Proven Track Record</div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-slate-900 dark:text-white">
+          Trusted by Premier Establishments Across North Goa.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="glass-card tilt-card p-6 rounded-3xl border border-white/10 relative">
+          <div class="card-glare"></div>
+          <div class="flex items-center gap-1 text-amber-400 mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+            "Arambol Connect installed a 16-channel 4K CCTV system across our beachfront villas in Mandrem. The night vision is crystal clear and I monitor everything on my phone while traveling abroad."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+            <div class="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-xs">MV</div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Mandrem Palms Resort</div>
+              <div class="text-[10px] text-slate-400">Mandrem, North Goa</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card tilt-card p-6 rounded-3xl border border-white/10 relative">
+          <div class="card-glare"></div>
+          <div class="flex items-center gap-1 text-amber-400 mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+            "Their Google Map SEO pushed our restaurant into the Top-3 within 4 weeks. During the peak season, our tourist footfall nearly doubled. Best return on marketing we've ever had."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+            <div class="w-9 h-9 rounded-full bg-blue-500/20 text-blue-400 font-bold flex items-center justify-center text-xs">TC</div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Sunset Cliff Cafe</div>
+              <div class="text-[10px] text-slate-400">Arambol Sweet Water Lake Road</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card tilt-card p-6 rounded-3xl border border-white/10 relative">
+          <div class="card-glare"></div>
+          <div class="flex items-center gap-1 text-amber-400 mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+            "Having a physical office in Deulwada is a game-changer. They resolved our GST filings, set up our FSSAI license, and automated our restaurant QR menu without any hassle."
+          </p>
+          <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+            <div class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-xs">BK</div>
+            <div>
+              <div class="text-xs font-bold text-slate-900 dark:text-white">Boho Kitchen & Bakery</div>
+              <div class="text-[10px] text-slate-400">Arambol Main Road</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location Section -->
+  <section id="contact" class="py-20 relative z-10 bg-black/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        
+        <!-- Left: Direct Endpoints & Local Office -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <div class="text-xs font-bold tracking-widest uppercase text-emerald-400 mb-2">Reach Out 24/7</div>
+            <h2 class="text-3xl font-extrabold font-display text-slate-900 dark:text-white">
+              Let's Engineer Your Next Stage of Growth.
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-sm mt-3 leading-relaxed">
+              Drop by our Arambol center or connect instantly via phone or WhatsApp. Our technicians and consultants are stationed on-ground in North Goa.
+            </p>
+          </div>
+
+          <!-- Contact Cards -->
+          <div class="space-y-3">
+            
+            <!-- Phone -->
+            <a href="tel:+919373913379" class="glass-card p-4 rounded-2xl flex items-center gap-4 border border-white/10 hover:border-emerald-500/40 transition group">
+              <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-slate-950 transition">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div class="flex-1">
+                <div class="text-xs text-slate-400">Direct Phone (Click to Call)</div>
+                <div class="text-sm font-bold text-slate-900 dark:text-white">+91 9373913379</div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-emerald-400 transition"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/919546506600?text=Hello%20Arambol%20Connect,%20I%20would%20like%20to%20discuss%20my%20business%20requirements" target="_blank" rel="noopener" class="glass-card p-4 rounded-2xl flex items-center gap-4 border border-white/10 hover:border-emerald-500/40 transition group">
+              <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:bg-emerald-500 group-hover:text-slate-950 transition">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+              </div>
+              <div class="flex-1">
+                <div class="text-xs text-slate-400">Official WhatsApp (Instant Revert)</div>
+                <div class="text-sm font-bold text-slate-900 dark:text-white">+91 9546506600</div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-emerald-400 transition"></i>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:arambolconnect@gmail.com" class="glass-card p-4 rounded-2xl flex items-center gap-4 border border-white/10 hover:border-emerald-500/40 transition group">
+              <div class="p-3 rounded-xl bg-blue-500/10 text-blue-400 group-hover:bg-blue-500 group-hover:text-slate-950 transition">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div class="flex-1">
+                <div class="text-xs text-slate-400">Official Inquiries & Proposals</div>
+                <div class="text-sm font-bold text-slate-900 dark:text-white">arambolconnect@gmail.com</div>
+              </div>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-blue-400 transition"></i>
+            </a>
+
+            <!-- Physical Office Address -->
+            <div class="glass-card p-4 rounded-2xl flex items-start gap-4 border border-white/10">
+              <div class="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Registered Office</div>
+                <div class="text-sm font-bold text-slate-900 dark:text-white">137, Deulwada, Arambol</div>
+                <div class="text-xs text-slate-400 mt-0.5">North Goa - 403524, India</div>
+                <a href="https://maps.google.com/?q=137,+Deulwada,+Arambol,+Goa+403524" target="_blank" class="inline-flex items-center gap-1 text-[11px] text-emerald-400 hover:underline mt-2 font-medium">
+                  <span>Open in Google Maps</span>
+                  <i data-lucide="external-link" class="w-3 h-3"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form with Direct WhatsApp Integration -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-3xl p-8 border border-white/10 shadow-2xl relative">
+            <h3 class="text-xl font-bold font-display text-slate-900 dark:text-white mb-1">
+              Send an Inquiry or Schedule a Site Visit
+            </h3>
+            <p class="text-xs text-slate-400 mb-6">
+              Fill in your details below. You can submit directly or forward with one click to our WhatsApp dispatch desk.
+            </p>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-400 mb-1">Your Full Name *</label>
+                  <input type="text" id="form-name" required placeholder="e.g. Rahul Sharma / Alex" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-emerald-500 focus:outline-none text-xs text-white">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-400 mb-1">Phone Number (WhatsApp) *</label>
+                  <input type="tel" id="form-phone" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-emerald-500 focus:outline-none text-xs text-white">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-400 mb-1">Business or Property Name</label>
+                  <input type="text" id="form-business" placeholder="e.g. Arambol Cliff Villa" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-emerald-500 focus:outline-none text-xs text-white">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-slate-400 mb-1">Primary Requirement</label>
+                  <select id="form-service" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-white/10 focus:border-emerald-500 focus:outline-none text-xs text-white">
+                    <option value="CCTV Installation (4-32 Ch)">CCTV Installation (4, 8, 16, 32 Ch)</option>
+                    <option value="Google Map SEO Top-3">Google Map SEO Top-3</option>
+                    <option value="Hospitality Tech / QR Menu">Hospitality Tech / QR Menu / Direct Booking</option>
+                    <option value="GST / MSME / FSSAI Compliance">GST / MSME / FSSAI Compliance</option>
+                    <option value="All-in-One Turnkey Bundle">All-in-One Turnkey Bundle</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-400 mb-1">Project Details or Site Address</label>
+                <textarea id="form-message" rows="3" placeholder="Tell us about camera count, property location in Arambol/Goa, or specific compliance questions..." class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-emerald-500 focus:outline-none text-xs text-white"></textarea>
+              </div>
+
+              <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                <button type="submit" class="w-full sm:flex-1 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-500/25">
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                  <span>Submit Inquiry</span>
+                </button>
+
+                <button type="button" onclick="submitDirectToWhatsApp()" class="w-full sm:flex-1 py-3.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 border border-emerald-500/30 font-bold text-xs flex items-center justify-center gap-2 transition">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i>
+                  <span>Submit via WhatsApp (+91 9546506600)</span>
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Apple-Style Clean Footer -->
+  <footer class="border-t border-white/10 bg-[#0B0F19] text-slate-400 text-xs py-14 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-2 font-display font-bold text-lg text-white">
+            <span class="text-white">Arambol</span>
+            <span class="text-emerald-400">Connect</span>
+          </div>
+          <p class="text-xs text-slate-400 max-w-sm leading-relaxed">
+            The integrated business infrastructure and digital marketing agency for North Goa. On-site technical deployments across Arambol, Mandrem, Morjim, Ashwem, and Anjuna.
+          </p>
+          <div class="text-[11px] text-slate-500">
+            Head Office: 137, Deulwada, Arambol, Goa - 403524
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs font-bold text-white uppercase tracking-wider mb-3">Direct Contact</div>
+          <ul class="space-y-2 text-xs">
+            <li><a href="tel:+919373913379" class="hover:text-emerald-400 transition flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i> +91 9373913379</a></li>
+            <li><a href="https://wa.me/919546506600" target="_blank" class="hover:text-emerald-400 transition flex items-center gap-1.5"><i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i> +91 9546506600</a></li>
+            <li><a href="mailto:arambolconnect@gmail.com" class="hover:text-emerald-400 transition flex items-center gap-1.5"><i data-lucide="mail" class="w-3.5 h-3.5 text-blue-400"></i> arambolconnect@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="text-xs font-bold text-white uppercase tracking-wider mb-3">Key Services</div>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#cctv-feature" class="hover:text-white transition">CCTV Commercial Packs (4-32 Ch)</a></li>
+            <li><a href="#services" class="hover:text-white transition">Google Map SEO Top-3</a></li>
+            <li><a href="#services" class="hover:text-white transition">Hospitality Direct Booking & QR</a></li>
+            <li><a href="#services" class="hover:text-white transition">GST & FSSAI Licensing</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <div>
+          © 2026 Arambol Connect. All Rights Reserved. 137, Deulwada, Arambol, Goa - 403524.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="tel:+919373913379" class="hover:text-emerald-400 transition">Phone: +91 9373913379</a>
+          <span>•</span>
+          <a href="https://wa.me/919546506600" target="_blank" class="hover:text-emerald-400 transition">WhatsApp: +91 9546506600</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Pulsing WhatsApp Widget -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <!-- Quick Bubble Tooltip -->
+    <div id="wa-bubble-hint" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl glass-card text-xs font-medium text-white shadow-2xl border border-emerald-500/30 animate-float-subtle">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>Chat with Arambol Tech Desk</span>
+    </div>
+
+    <!-- Pulsing WhatsApp Button -->
+    <a href="https://wa.me/919546506600?text=Hello%20Arambol%20Connect,%20I%20have%20an%20inquiry%20regarding%20your%20services" target="_blank" rel="noopener" aria-label="Chat on WhatsApp +91 9546506600" class="relative group p-4 rounded-full bg-emerald-500 text-slate-950 shadow-2xl shadow-emerald-500/50 hover:bg-emerald-400 transition transform hover:scale-110 active:scale-95 flex items-center justify-center">
+      <!-- Glow Radar Rings -->
+      <span class="absolute inset-0 rounded-full bg-emerald-400 opacity-60 animate-ping"></span>
+      <span class="absolute -inset-1 rounded-full bg-emerald-500/30 blur-sm"></span>
+      
+      <i data-lucide="message-circle" class="w-7 h-7 fill-slate-950 relative z-10"></i>
+    </a>
+  </div>
+
+  <!-- Mobile Floating Sticky Bottom Contact Bar -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 sm:hidden glass-nav p-2.5 border-t border-white/10 flex items-center gap-2">
+    <a href="tel:+919373913379" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-emerald-500 text-slate-950 font-bold text-xs shadow-md">
+      <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+      <span>Call +91 9373913379</span>
+    </a>
+    <a href="https://wa.me/919546506600?text=Hi%20Arambol%20Connect" target="_blank" class="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold text-xs">
+      <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Toast Notification Overlay -->
+  <div id="toast" class="fixed top-24 right-4 z-50 hidden max-w-sm rounded-2xl glass-card border border-emerald-500/40 p-4 shadow-2xl text-xs text-white transform transition-all duration-300 flex items-start gap-3">
+    <div class="p-1 rounded-full bg-emerald-500/20 text-emerald-400 shrink-0">
+      <i data-lucide="check" class="w-4 h-4"></i>
+    </div>
+    <div class="flex-1">
+      <div class="font-bold text-emerald-400" id="toast-title">Success!</div>
+      <div class="text-slate-300 text-[11px] mt-0.5" id="toast-msg">Your inquiry has been received.</div>
+    </div>
+  </div>
+
+
+  <!-- ======================================================================= -->
+  <!-- JAVASCRIPT: CORE LOGIC, 3D TILT, LOCALSTORAGE THEME & DYNAMIC PRICING    -->
+  <!-- ======================================================================= -->
+  <script>
+    // ------------------------------------------------------------------------
+    // 1. DYNAMIC PRICING CONFIGURATION
+    // You can modify any price, feature list, or package here anytime post-launch
+    // without altering the HTML structure. The UI dynamically reflects changes.
+    // ------------------------------------------------------------------------
+    const PRICING_CONFIG = {
+      currencySymbol: '₹',
+      contactPhone: '+919373913379',
+      contactWhatsApp: '919546506600',
+      categories: [
+        { id: 'all', label: 'All Solutions' },
+        { id: 'cctv', label: 'CCTV Security' },
+        { id: 'digital', label: 'Digital Growth' },
+        { id: 'hospitality', label: 'Hospitality Tech' },
+        { id: 'compliance', label: 'Compliance & GST' }
+      ],
+      packages: [
+        // --- CCTV PACKS ---
+        {
+          id: 'cctv-4',
+          category: 'cctv',
+          name: '4-Channel Villa Security Pack',
+          subtitle: 'Ideal for villas, small cafes, and shops in Arambol',
+          badge: 'Bestseller for Villas',
+          popular: false,
+          price: '₹14,999',
+          period: 'Turnkey Installed • One-Time',
+          features: [
+            '4× 2MP/5MP Full HD Weatherproof Cameras',
+            'Starlight Infrared Night Vision up to 25m',
+            '4-Channel Smart NVR/DVR with 1TB Surveillance HDD',
+            'iOS & Android Remote Live View Setup',
+            'Includes Wiring, Connectors & Arambol On-site Installation',
+            '1-Year Free On-ground Maintenance & Warranty'
+          ],
+          ctaText: 'Book 4-Cam Setup',
+          whatsappMessage: 'Hi Arambol Connect, I want to book the 4-Channel Villa Security Pack (₹14,999) for my property.'
+        },
+        {
+          id: 'cctv-8',
+          category: 'cctv',
+          name: '8-Channel Commercial Pack',
+          subtitle: 'Best for boutique guest houses, restaurants & co-working spaces',
+          badge: 'Most Popular',
+          popular: true,
+          price: '₹26,999',
+          period: 'Turnkey Installed • One-Time',
+          features: [
+            '8× High-Definition 5MP Cameras (Dome & Bullet combo)',
+            'Smart ColorVu / Color Night Vision with Audio Mic',
+            '8-Channel PoE NVR + 2TB Seagate SkyHawk HDD',
+            'Multi-device Remote Live View (Staff & Owner access)',
+            'AI Human & Vehicle Motion Perimeter Alerts',
+            '2-Year Hardware Warranty + Arambol Express Service'
+          ],
+          ctaText: 'Deploy 8-Cam System',
+          whatsappMessage: 'Hi Arambol Connect, I would like to order the 8-Channel Commercial Pack (₹26,999) for my business.'
+        },
+        {
+          id: 'cctv-16',
+          category: 'cctv',
+          name: '16-Channel Resort Pro Pack',
+          subtitle: 'Comprehensive perimeter & asset surveillance for beach resorts',
+          badge: 'Resort Grade',
+          popular: false,
+          price: '₹49,999',
+          period: 'Turnkey Installed • One-Time',
+          features: [
+            '16× 5MP/4K Ultra HD Commercial-Grade IP Cameras',
+            'Full Color Night Vision + 40m Long-range IR',
+            '16-Channel 4K NVR with 4TB Storage (30-day loop)',
+            'Centralized Command Screen & Multi-phone Streaming',
+            'AI Intrusion Detection, Tripwire & Line Crossing Alerts',
+            'Industrial Optical Fiber / Cat6 Rigorous Cabling'
+          ],
+          ctaText: 'Request Resort Survey',
+          whatsappMessage: 'Hi Arambol Connect, please schedule an on-site survey for the 16-Channel Resort Pro Pack (₹49,999).'
+        },
+        {
+          id: 'cctv-32',
+          category: 'cctv',
+          name: '32-Channel Enterprise Security',
+          subtitle: 'Large luxury resorts, beach clubs & commercial complexes',
+          badge: 'Enterprise',
+          popular: false,
+          price: '₹94,999',
+          period: 'Custom Structured Deployment',
+          features: [
+            '32× 4K Ultra HD IP Cameras with PTZ (Pan-Tilt-Zoom)',
+            '360° Optical Zoom, Number Plate Recognition',
+            'Dual NVR Redundancy + 8TB Enterprise Surveillance Storage',
+            'UPS Power Backup Integration & Cloud Archive option',
+            'Control Room Wall Display Matrix Setup',
+            'Dedicated On-call Arambol Technician Priority SLA'
+          ],
+          ctaText: 'Get Enterprise Quote',
+          whatsappMessage: 'Hi Arambol Connect, I need a proposal for the 32-Channel Enterprise Security System (₹94,999).'
+        },
+
+        // --- DIGITAL GROWTH PACKS ---
+        {
+          id: 'digital-seo',
+          category: 'digital',
+          name: 'Google Map Pack Top-3 SEO',
+          subtitle: 'Dominate local searches like "best cafe in Arambol" & "resort near me"',
+          badge: 'High ROI Guaranteed',
+          popular: true,
+          price: '₹7,999',
+          period: 'per month • No lock-in',
+          features: [
+            'Google Business Profile (GBP) 100% Full Audit & Optimization',
+            'Rank in the coveted Google Local 3-Pack within 30-45 Days',
+            'Geo-tagged Photo Uploads & Local Keyword Citation Building',
+            'Automated 5-Star Review Generation Strategy',
+            'Direct Integration of WhatsApp & Booking Buttons on Google',
+            'Monthly Transparent Keyword Ranking & Calls Report'
+          ],
+          ctaText: 'Claim Top-3 Ranking',
+          whatsappMessage: 'Hi Arambol Connect, I want my business to rank Top-3 on Google Maps in Arambol/Goa (₹7,999/mo).'
+        },
+        {
+          id: 'digital-smm',
+          category: 'digital',
+          name: 'Instagram Growth & Meta Ads',
+          subtitle: 'Attract foreign tourists & domestic high-spending travelers',
+          badge: 'Viral Reach',
+          popular: false,
+          price: '₹11,999',
+          period: 'per month + ad spend',
+          features: [
+            '12 High-Quality Reels & Curated Photo Carousels / Month',
+            'Targeted Facebook & Instagram Ads Setup & A/B Testing',
+            'Geo-targeting tourists arriving in North Goa (Mopa & Dabolim)',
+            'Influencer Collaboration & Local Arambol Community Tagging',
+            'Direct WhatsApp / Booking DM Automation Chatbot',
+            'Bi-weekly Performance Analytics & Lead Audits'
+          ],
+          ctaText: 'Scale Instagram Now',
+          whatsappMessage: 'Hi Arambol Connect, I want to grow our Instagram and run Meta Ads (₹11,999/mo).'
+        },
+        {
+          id: 'digital-web',
+          category: 'digital',
+          name: 'Modern Web & App Development',
+          subtitle: 'Ultra-fast, mobile-first website with direct booking engine',
+          badge: 'Apple-Grade UI',
+          popular: false,
+          price: '₹18,999',
+          period: 'Turnkey Launch • One-Time',
+          features: [
+            'Custom Ultra-Fast PWA Website (Sub-second load speed)',
+            'Mobile-optimized for iPhone, Android & Tablets',
+            'Direct WhatsApp & Call Click-to-Action Triggers',
+            'Integrated Payment Gateway (UPI, Cards, International)',
+            'Multilingual Ready (English, Russian, Hebrew, etc.)',
+            'Free 1-Year Cloud Hosting & SSL Certificate Included'
+          ],
+          ctaText: 'Build Custom Website',
+          whatsappMessage: 'Hi Arambol Connect, I want to build a modern website & web app (₹18,999).'
+        },
+
+        // --- HOSPITALITY TECH ---
+        {
+          id: 'hosp-qr',
+          category: 'hospitality',
+          name: 'Interactive QR Digital Menu',
+          subtitle: 'Contactless multi-lingual menus for beach shacks, cafes & bistros',
+          badge: 'Essential for Arambol',
+          popular: false,
+          price: '₹4,999',
+          period: 'Annual License • Includes Acrylic Stands',
+          features: [
+            'Instant Scan QR Menu (No app download required)',
+            'Auto-Translate in 7 Languages (Russian, Hebrew, French, etc.)',
+            'Real-time Item Availability & Price Updates from phone',
+            'High-Resolution Dish Photos & Dietary Filters (Vegan, Gluten-free)',
+            '10 Premium Acrylic Waterproof QR Stands Delivered',
+            'Direct Waiter Call & Bill Request Button'
+          ],
+          ctaText: 'Get QR Menu Suite',
+          whatsappMessage: 'Hi Arambol Connect, I want the Interactive QR Digital Menu system (₹4,999) for my restaurant.'
+        },
+        {
+          id: 'hosp-booking',
+          category: 'hospitality',
+          name: 'Hotel Direct Booking Engine',
+          subtitle: 'Stop paying 18-25% OTA commissions to Booking.com & MakeMyTrip',
+          badge: '0% Commission',
+          popular: true,
+          price: '₹14,999',
+          period: 'One-Time Setup • Zero Commission',
+          features: [
+            'Direct Guest Room Reservation Engine for your website',
+            'Instant Razorpay / Stripe Card & International Payment collection',
+            'Sync with Google Hotels & Google Maps Free Booking Link',
+            'Automated WhatsApp Booking Confirmations & Directions to Guest',
+            'Room Inventory & Seasonal Pricing Calendar Manager',
+            'Zero commission on all direct bookings — you keep 100%'
+          ],
+          ctaText: 'Eliminate OTA Fees',
+          whatsappMessage: 'Hi Arambol Connect, I want the Hotel Direct Booking Engine (₹14,999) to save on commissions.'
+        },
+        {
+          id: 'hosp-restaurant',
+          category: 'hospitality',
+          name: 'Table Booking & POS Suite',
+          subtitle: 'Streamlined table reservations, waitlists & kitchen ticketing',
+          badge: 'All-in-One F&B',
+          popular: false,
+          price: '₹12,499',
+          period: 'Annual License',
+          features: [
+            'Live Table Reservation Widget on Google & Instagram',
+            'SMS & WhatsApp Table Confirmation with Directions',
+            'Kitchen Order Ticket (KOT) Management on Tablet/Print',
+            'Daily Sales, GST & Inventory Stock Breakdown Reports',
+            'Customer Database for WhatsApp Marketing & Events',
+            'On-site Staff Training in Arambol Included'
+          ],
+          ctaText: 'Deploy Restaurant OS',
+          whatsappMessage: 'Hi Arambol Connect, I want to implement Table Booking & POS Suite (₹12,499).'
+        },
+
+        // --- COMPLIANCE & LEGAL TECH ---
+        {
+          id: 'comp-gst-reg',
+          category: 'compliance',
+          name: 'GST Registration Pack',
+          subtitle: 'Fast-track GSTIN registration for Goa businesses & rentals',
+          badge: '24-48h Filing',
+          popular: false,
+          price: '₹1,999',
+          period: 'Government Filing Included',
+          features: [
+            'Complete Document Verification & Preparation',
+            'Fast-Track Application Submission to GST Portal',
+            'Department Query Handling & Officer Liaison',
+            'Official GSTIN Certificate Issuance in 3-7 Working Days',
+            'Free Initial Tax Advisory & Invoicing Guidance',
+            '100% On-Ground Arambol Documentation Support'
+          ],
+          ctaText: 'Get GSTIN Now',
+          whatsappMessage: 'Hi Arambol Connect, I need GST Registration for my Goa business (₹1,999).'
+        },
+        {
+          id: 'comp-gst-annual',
+          category: 'compliance',
+          name: 'Monthly GST Return Filing',
+          subtitle: 'Hassle-free GSTR-1 & GSTR-3B monthly filing with zero penalty',
+          badge: 'Zero Penalty Guarantee',
+          popular: true,
+          price: '₹1,299',
+          period: 'per month (billed annually or quarterly)',
+          features: [
+            'Timely Monthly Filing of GSTR-1 and GSTR-3B',
+            'Input Tax Credit (ITC) 2B Reconciliation to save taxes',
+            'E-Way Bill Generation Support when needed',
+            'Annual Return GSTR-9 Filing Assistance',
+            'Dedicated Chartered Accountant / Tax Practitioner Review',
+            'WhatsApp Reminder & One-click Document Upload'
+          ],
+          ctaText: 'Automate GST Filing',
+          whatsappMessage: 'Hi Arambol Connect, I want to outsource my monthly GST return filings (₹1,299/mo).'
+        },
+        {
+          id: 'comp-fssai',
+          category: 'compliance',
+          name: 'FSSAI Food Safety License',
+          subtitle: 'Mandatory license for cafes, beach shacks, bakeries & cloud kitchens',
+          badge: 'Mandatory for Food',
+          popular: false,
+          price: '₹2,499',
+          period: 'Basic/State License Assistance',
+          features: [
+            'FSSAI 14-Digit Food Registration / State License Application',
+            'Food Safety Documentation & Menu Categorization',
+            'FoSCoS Portal Submission & Compliance Tracking',
+            'FSSAI Certificate Delivery in Physical & Digital format',
+            'Mandatory Food Hygiene Display Board Guidance',
+            'Renewal Reminder Service so you never face penalties'
+          ],
+          ctaText: 'Get Food License',
+          whatsappMessage: 'Hi Arambol Connect, I need FSSAI Food Safety Licensing for my food business in Goa (₹2,499).'
+        },
+        {
+          id: 'comp-startup',
+          category: 'compliance',
+          name: 'Goa Business Launch Bundle',
+          subtitle: 'Everything needed to launch legally in Arambol & North Goa',
+          badge: 'Complete Peace of Mind',
+          popular: false,
+          price: '₹6,999',
+          period: 'All-in-One Turnkey Pack',
+          features: [
+            'GST Registration + First 2 Months Return Filing Free',
+            'MSME / Udyam Registration (for government perks & loans)',
+            'FSSAI Food Registration / Trade Advisory',
+            'Panchayat NOC / Commercial Rent Agreement Legal Draft',
+            'Current Bank Account Opening Priority Assistance in Goa',
+            'Local Arambol Office In-person Consultancy'
+          ],
+          ctaText: 'Launch Legally',
+          whatsappMessage: 'Hi Arambol Connect, I want the Complete Goa Business Launch Bundle (₹6,999).'
+        }
+      ]
+    };
+
+    // ------------------------------------------------------------------------
+    // 2. DYNAMIC PRICING RENDER LOGIC
+    // ------------------------------------------------------------------------
+    let currentPricingCategory = 'all';
+
+    function renderPricingTabs() {
+      const container = document.getElementById('pricing-category-tabs');
+      if (!container) return;
+
+      container.innerHTML = PRICING_CONFIG.categories.map(cat => {
+        const isActive = cat.id === currentPricingCategory;
+        return `
+          <button 
+            type="button"
+            onclick="filterPricing('${cat.id}')"
+            class="px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200 ${
+              isActive 
+                ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20' 
+                : 'bg-white/10 dark:bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 border border-white/5'
+            }"
+          >
+            ${cat.label}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function renderPricingCards(category = 'all') {
+      const container = document.getElementById('pricing-cards-container');
+      if (!container) return;
+
+      const filtered = category === 'all' 
+        ? PRICING_CONFIG.packages 
+        : PRICING_CONFIG.packages.filter(p => p.category === category);
+
+      container.innerHTML = filtered.map(item => {
+        const popularBorder = item.popular 
+          ? 'border-emerald-500/50 shadow-2xl shadow-emerald-500/10' 
+          : 'border-white/10';
+
+        const popularBadge = item.popular 
+          ? `<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500 text-slate-950 shadow-sm">${item.badge || 'Popular'}</span>`
+          : (item.badge ? `<span class="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-white/10 text-emerald-400 border border-white/10">${item.badge}</span>` : '<span></span>');
+
+        const featuresHtml = item.features.map(f => `
+          <li class="flex items-start gap-2 text-xs text-slate-300">
+            <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5"></i>
+            <span>${f}</span>
+          </li>
+        `).join('');
+
+        const waUrl = `https://wa.me/${PRICING_CONFIG.contactWhatsApp}?text=${encodeURIComponent(item.whatsappMessage)}`;
+
+        return `
+          <div class="glass-card tilt-card rounded-3xl p-7 border ${popularBorder} flex flex-col justify-between relative group">
+            <div class="card-glare"></div>
+
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 font-mono">${item.category.toUpperCase()}</span>
+                ${popularBadge}
+              </div>
+
+              <h3 class="text-xl font-bold font-display text-white mb-1.5">${item.name}</h3>
+              <p class="text-xs text-slate-400 mb-6 leading-relaxed">${item.subtitle}</p>
+
+              <div class="mb-6 pb-6 border-b border-white/10">
+                <div class="flex items-baseline gap-1.5">
+                  <span class="text-3xl font-extrabold text-emerald-400 font-display">${item.price}</span>
+                </div>
+                <div class="text-[11px] text-slate-400 mt-0.5">${item.period}</div>
+              </div>
+
+              <ul class="space-y-3 mb-8">
+                ${featuresHtml}
+              </ul>
+            </div>
+
+            <div class="space-y-2 pt-4 border-t border-white/10">
+              <a href="${waUrl}" target="_blank" rel="noopener" class="w-full py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 transition shadow-md shadow-emerald-500/20 active:scale-95">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>${item.ctaText || 'Get Started via WhatsApp'}</span>
+              </a>
+
+              <a href="tel:${PRICING_CONFIG.contactPhone}" class="w-full py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 font-semibold text-[11px] flex items-center justify-center gap-1.5 transition border border-white/5">
+                <i data-lucide="phone" class="w-3 h-3 text-emerald-400"></i>
+                <span>Or Call ${PRICING_CONFIG.contactPhone}</span>
+              </a>
+            </div>
+
+          </div>
+        `;
+      }).join('');
+
+      // Refresh icons & 3D tilt
+      if (window.lucide) lucide.createIcons();
+      initTiltEffect();
+    }
+
+    function filterPricing(categoryId) {
+      currentPricingCategory = categoryId;
+      renderPricingTabs();
+      renderPricingCards(categoryId);
+    }
+
+    // ------------------------------------------------------------------------
+    // 3. SMOOTH 3D TILT HOVER EFFECT (APPLE HARDWARE AESTHETIC)
+    // ------------------------------------------------------------------------
+    function initTiltEffect() {
+      const cards = document.querySelectorAll('.tilt-card');
+      cards.forEach(card => {
+        // Prevent duplicate listener attachments
+        if (card.dataset.tiltInitialized) return;
+        card.dataset.tiltInitialized = 'true';
+
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((y - centerY) / centerY) * -6;
+          const rotateY = ((x - centerX) / centerX) * 6;
+
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.015, 1.015, 1.015)`;
+          card.style.transition = 'transform 0.1s ease-out';
+
+          const glare = card.querySelector('.card-glare');
+          if (glare) {
+            glare.style.opacity = '1';
+            glare.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.12) 0%, transparent 65%)`;
+          }
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+          card.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+          const glare = card.querySelector('.card-glare');
+          if (glare) glare.style.opacity = '0';
+        });
+      });
+    }
+
+    // ------------------------------------------------------------------------
+    // 4. THEME TOGGLE WITH LOCALSTORAGE PERSISTENCE
+    // ------------------------------------------------------------------------
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('arambol_theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('arambol_theme', 'dark');
+      }
+      updateThemeIcons();
+    }
+
+    function updateThemeIcons() {
+      const isDark = document.documentElement.classList.contains('dark');
+      document.querySelectorAll('.theme-icon-sun').forEach(el => el.classList.toggle('hidden', isDark));
+      document.querySelectorAll('.theme-icon-moon').forEach(el => el.classList.toggle('hidden', !isDark));
+    }
+
+    // ------------------------------------------------------------------------
+    // 5. MULTILINGUAL DROPDOWN & GOOGLE TRANSLATE ENGINE
+    // ------------------------------------------------------------------------
+    const langBtn = document.getElementById('lang-menu-btn');
+    const langMenu = document.getElementById('lang-menu');
+
+    if (langBtn && langMenu) {
+      langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', () => {
+        langMenu.classList.add('hidden');
+      });
+    }
+
+    function setLanguage(langCode, label, flag) {
+      document.getElementById('current-lang-label').innerText = `${flag} ${label}`;
+      langMenu.classList.add('hidden');
+
+      // Set cookie for Google Translate
+      const googleLang = langCode;
+      document.cookie = `googtrans=/en/${googleLang}; path=/; domain=${window.location.hostname}`;
+      document.cookie = `googtrans=/en/${googleLang}; path=/;`;
+
+      // Trigger translate combo if present
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = googleLang;
+        select.dispatchEvent(new Event('change'));
+      } else {
+        window.location.reload();
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // 6. INSTANT QUOTE BUILDER LOGIC
+    // ------------------------------------------------------------------------
+    function calculateQuote() {
+      const checkedBoxes = Array.from(document.querySelectorAll('#calc-checkbox-container input[type="checkbox"]:checked'));
+      const count = checkedBoxes.length;
+      const totalDisplay = document.getElementById('quote-total-display');
+      const countDisplay = document.getElementById('quote-items-count');
+
+      if (count === 0) {
+        totalDisplay.innerText = 'Select Services Above';
+        countDisplay.innerText = '0 services selected • Includes on-ground Arambol warranty';
+        return;
+      }
+
+      let sum = 0;
+      checkedBoxes.forEach(cb => {
+        sum += parseInt(cb.getAttribute('data-price') || 0, 10);
+      });
+
+      // Apply automatic 10% multi-service package discount if >= 2 services selected
+      let discountText = '';
+      if (count >= 2) {
+        const discounted = Math.round(sum * 0.9);
+        totalDisplay.innerHTML = `₹${discounted.toLocaleString('en-IN')} <span class="text-xs text-emerald-400 font-normal line-through">₹${sum.toLocaleString('en-IN')}</span> <span class="text-xs bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full font-bold ml-2">10% Multi-Pack Off</span>`;
+        discountText = ` • ${count} services bundled with 10% on-ground package discount`;
+      } else {
+        totalDisplay.innerText = `₹${sum.toLocaleString('en-IN')}`;
+        discountText = ` • ${count} service selected`;
+      }
+
+      countDisplay.innerText = `${discountText} • Arambol team on-site warranty included`;
+    }
+
+    function sendCalculatedQuoteToWhatsApp() {
+      const checkedBoxes = Array.from(document.querySelectorAll('#calc-checkbox-container input[type="checkbox"]:checked'));
+      if (checkedBoxes.length === 0) {
+        showToast('Please Select a Service', 'Pick at least one service checkbox to calculate your quote.');
+        return;
+      }
+
+      const services = checkedBoxes.map(b => b.getAttribute('data-service')).join(', ');
+      const totalText = document.getElementById('quote-total-display').innerText.replace(/\n/g, ' ');
+
+      const message = encodeURIComponent(`Hello Arambol Connect! 👋 I used your website Instant Quote Builder and would like to finalize: ${services}. Estimated package: ${totalText}. My property is based in Goa.`);
+      window.open(`https://wa.me/919546506600?text=${message}`, '_blank');
+    }
+
+    // ------------------------------------------------------------------------
+    // 7. FORM SUBMISSIONS & TOAST UTILITY
+    // ------------------------------------------------------------------------
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const phone = document.getElementById('form-phone').value;
+      const service = document.getElementById('form-service').value;
+
+      showToast('Inquiry Dispatched!', `Thank you ${name}. Our Arambol team has logged your request for ${service}. We'll call back on ${phone}.`);
+      e.target.reset();
+    }
+
+    function submitDirectToWhatsApp() {
+      const name = document.getElementById('form-name').value || 'Visitor';
+      const phone = document.getElementById('form-phone').value || 'Not provided';
+      const business = document.getElementById('form-business').value || 'Not specified';
+      const service = document.getElementById('form-service').value || 'Consultation';
+      const msg = document.getElementById('form-message').value || 'General inquiry';
+
+      const formatted = `Hello Arambol Connect Team! 👋%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Business:* ${encodeURIComponent(business)}%0A*Required:* ${encodeURIComponent(service)}%0A*Details:* ${encodeURIComponent(msg)}`;
+      window.open(`https://wa.me/919546506600?text=${formatted}`, '_blank');
+    }
+
+    function showToast(title, message) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-title').innerText = title;
+      document.getElementById('toast-msg').innerText = message;
+      
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 5000);
+    }
+
+    // ------------------------------------------------------------------------
+    // 8. MOBILE MENU TOGGLE
+    // ------------------------------------------------------------------------
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOpen = document.getElementById('menu-icon-open');
+    const menuClose = document.getElementById('menu-icon-close');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          menuOpen.classList.add('hidden');
+          menuClose.classList.remove('hidden');
+        } else {
+          mobileMenu.classList.add('hidden');
+          menuOpen.classList.remove('hidden');
+          menuClose.classList.add('hidden');
+        }
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuOpen.classList.remove('hidden');
+          menuClose.classList.add('hidden');
+        });
+      });
+    }
+
+    // ------------------------------------------------------------------------
+    // 9. REAL-TIME CLOCK FOR CAMERA MOCK
+    // ------------------------------------------------------------------------
+    function updateCameraClock() {
+      const elem = document.getElementById('live-time-display');
+      if (elem) {
+        const now = new Date();
+        const str = now.toISOString().replace('T', ' ').substring(0, 19);
+        elem.innerText = `REC: ${str} UTC`;
+      }
+    }
+    setInterval(updateCameraClock, 1000);
+
+    // ------------------------------------------------------------------------
+    // 10. THREE.JS 3D INTERACTIVE PARTICLE ENGINE
+    // ------------------------------------------------------------------------
+    function initThreeBackground() {
+      if (typeof THREE === 'undefined') return;
+      const canvas = document.getElementById('three-bg');
+      if (!canvas) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 40;
+
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+      // Particles Geometry
+      const particleCount = 280;
+      const geometry = new THREE.BufferGeometry();
+      const positions = new Float32Array(particleCount * 3);
+      const colors = new Float32Array(particleCount * 3);
+
+      const colorEmerald = new THREE.Color(0x10B981);
+      const colorCyan = new THREE.Color(0x38BDF8);
+
+      for (let i = 0; i < particleCount; i++) {
+        positions[i * 3] = (Math.random() - 0.5) * 85;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * 65;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 55;
+
+        const mixed = colorEmerald.clone().lerp(colorCyan, Math.random());
+        colors[i * 3] = mixed.r;
+        colors[i * 3 + 1] = mixed.g;
+        colors[i * 3 + 2] = mixed.b;
+      }
+
+      geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+      geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+      const material = new THREE.PointsMaterial({
+        size: 1.25,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.65,
+        blending: THREE.AdditiveBlending
+      });
+
+      const particles = new THREE.Points(geometry, material);
+      scene.add(particles);
+
+      // Interactive Mouse Parallax
+      let mouseX = 0;
+      let mouseY = 0;
+      let targetX = 0;
+      let targetY = 0;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX - window.innerWidth / 2) * 0.0008;
+        mouseY = (e.clientY - window.innerHeight / 2) * 0.0008;
+      });
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        targetX += (mouseX - targetX) * 0.04;
+        targetY += (mouseY - targetY) * 0.04;
+
+        particles.rotation.y += 0.0006;
+        particles.rotation.x += 0.0003;
+
+        camera.position.x += (targetX * 18 - camera.position.x) * 0.04;
+        camera.position.y += (-targetY * 18 - camera.position.y) * 0.04;
+        camera.lookAt(scene.position);
+
+        renderer.render(scene, camera);
+      }
+      animate();
+    }
+
+    // ------------------------------------------------------------------------
+    // 11. INITIALIZATION
+    // ------------------------------------------------------------------------
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Render dynamic pricing tabs & cards
+      renderPricingTabs();
+      renderPricingCards('all');
+
+      // 2. Initialize Lucide icons
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // 3. Initialize 3D Tilt Effect
+      initTiltEffect();
+
+      // 4. Initialize Three.js 3D Background
+      initThreeBackground();
+
+      // 5. Update initial theme icons
+      updateThemeIcons();
+
+      // 6. Update camera time
+      updateCameraClock();
+    });
+  </script>
+</body>
+</html>
